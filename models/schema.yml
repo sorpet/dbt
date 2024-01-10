@@ -1,0 +1,40 @@
+
+version: 2
+
+models:
+  - name: first
+    description: "A starter dbt model"
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_type: TEXT
+        constraints:
+          - type: not_null
+          - type: primary_key
+        tests:
+          - not_null
+          - unique
+      - name: initial
+        description: "initial"
+        data_type: TEXT
+  - name: second
+    description: "A starter dbt model"
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_type: TEXT
+        constraints:
+          - type: not_null
+          - type: primary_key
+        tests:
+          - not_null
+          - unique
+      - name: initial
+        description: "initial"
+        data_type: TEXT
